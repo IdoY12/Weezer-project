@@ -28,7 +28,6 @@ export default function EditPost() {
 
     useEffect(() => {
         (async () => {
-            // const post = await profileService.getPost(id!)
             if (!post) {
                 const profileFromServer = await profileService.getProfile();
                 dispatch(init(profileFromServer));
@@ -44,19 +43,13 @@ export default function EditPost() {
     }, [dispatch, id, post, reset]);
 
     async function submit(draft: PostDraft) {
-            const fd = new FormData();
-    
-            fd.append("title", draft.title);
-            fd.append("body", draft.body);
-    
             if(draft.image) {
-                const file = (draft.image as unknown as FileList)[0];
-                fd.append("image", file);
+                draft.image = (draft.image as unknown as FileList)[0];
             }
     
             try {
                 setIsSubmitting(true);
-                const post = await profileService.editPost(id!, fd);;
+                const post = await profileService.editPost(id!, draft);
                 reset();
                 dispatch(updatePost(post));
                 navigate('/profile');

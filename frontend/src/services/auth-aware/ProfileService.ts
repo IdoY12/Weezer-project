@@ -1,5 +1,6 @@
 import type Post from "../../models/post";
 import AuthAware from "./AuthAware";
+import type PostDraft from "../../models/post-draft";
 
 export default class ProfileService extends AuthAware {
 
@@ -13,8 +14,8 @@ export default class ProfileService extends AuthAware {
         return response.data;
     }
 
-    async newPost(formData: FormData): Promise<Post> {
-        const response = await this.axiosInstance.post<Post>(`/profile`, formData, {
+    async newPost(draft: PostDraft): Promise<Post> {
+        const response = await this.axiosInstance.post<Post>(`/profile`, draft, {
             headers: {
                 'Content-Type': 'multipart/form-data'
             }
@@ -27,8 +28,12 @@ export default class ProfileService extends AuthAware {
         return response.data;
     }
 
-    async editPost(id: string, formData: FormData): Promise<Post> {
-        const response = await this.axiosInstance.patch<Post>(`/profile/${id}`, formData);
+    async editPost(id: string, draft: PostDraft): Promise<Post> {
+        const response = await this.axiosInstance.patch<Post>(`/profile/${id}`, draft, {
+            headers: {
+                'Content-Type': 'multipart/form-data'
+            }
+        });
         return response.data;
     }
 }

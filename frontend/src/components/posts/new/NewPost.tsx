@@ -20,17 +20,11 @@ export default function NewPost() {
     const profileService = useService(ProfileService);
 
     async function submit(draft: PostDraft) {
-        const fd = new FormData();
-
-        fd.append("title", draft.title);
-        fd.append("body", draft.body);
-
-        const file = (draft.image as unknown as FileList)[0];
-        fd.append("image", file);
+        draft.image = (draft.image as unknown as FileList)[0];
 
         try {
             setIsSubmitting(true);
-            const post = await profileService.newPost(fd);
+            const post = await profileService.newPost(draft);
             reset();
             setPreview(null);
             dispatch(newPost(post));
