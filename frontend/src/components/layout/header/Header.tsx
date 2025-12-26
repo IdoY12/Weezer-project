@@ -18,7 +18,9 @@ export default function Header() {
             <div>logo</div>
             <nav>
                 {/* <a href="/profile">Profile</a> | <a href="/feed">Feed</a> */}
-                <NavLink to="/profile">Profile</NavLink> | <NavLink to="/feed">Feed</NavLink>
+                <NavLink to="/profile">Profile</NavLink> | 
+                <NavLink to="/feed">Feed</NavLink> |
+                <NavLink to="/translations">Translations</NavLink> 
 
             </nav>
             <div>

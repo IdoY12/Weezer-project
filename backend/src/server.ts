@@ -1,10 +1,10 @@
-import app, { start } from "./app";
-import config from 'config'
+import app, { start } from "./app"
+import config from 'config';
 
 
-(async() => {
+( async () => {
     const port = config.get<number>('app.port')
-    const appName = config.get<string>('app.name')
+    const appName = config.get<number>('app.name')
     await start()
-    app.listen(port, () => console.log(`${appName} started on port ${port}`))
-})();
+    await app.listen(port, () => console.log(`${appName} started on port ${port}`))
+})()

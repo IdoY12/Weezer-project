@@ -2,6 +2,7 @@ import { createContext } from "react";
 
 interface AuthContextInterface {
     jwt: string,
+    isPay: boolean,
     newJwt(jwt: string): void
 }
 

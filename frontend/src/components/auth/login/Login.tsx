@@ -29,6 +29,12 @@ export default function Login() {
 
     return (
         <div className='Login'>
+        <a href={import.meta.env.VITE_GOOGLE_SERVER_URL}>
+            <img src="https://img.icons8.com/?size=100&id=17949&format=png&color=000000" alt="" />
+            <br />
+            sign with google
+        </a>
+        <hr />
             <form onSubmit={handleSubmit(submit)}>
 
                 {errors.root?.message && (

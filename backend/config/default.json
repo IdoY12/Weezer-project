@@ -13,7 +13,7 @@
         "database": "weezer"
     },
     "s3": {
-        "bucket": "ido.images.weezer.com",
+        "bucket": "images.weezer.com",
         "isLocalStack": true,
         "connection": {
             "endpoint": "http://localhost:4566",
@@ -28,5 +28,17 @@
     "io": {
         "host": "localhost",
         "port": 3004
+    },
+    "google": {
+        "clientId": "671309257050-tiaf5qq0thrm45riv70ub718bdv86nqf.apps.googleusercontent.com",
+        "clientSecret": ""
+    },
+    "stripe": {
+        "publishableKey": "pk_test_51SgqgYISFdCWx0atQ84SNI5P2uiTrB3c8NvAgtuvhUKd2OlxWPNwaFhnWfYUHnhGIVkyz8paW9utyLxO7PEIlCw400huOeQ85C",
+        "clientSecret": "",
+        "whsec": ""
+    },
+    "openai": {
+        "secret": ""
     }
 }

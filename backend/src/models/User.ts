@@ -31,6 +31,29 @@ export default class User extends Model {
     @Column(DataType.STRING)
     password: string
 
+    @AllowNull(true)
+    @Column({
+        type: DataType.STRING,
+        unique: true
+    })
+    email: string | null
+
+    @AllowNull(true)
+    @Column({
+        type: DataType.STRING,
+        unique: true
+    })
+    googleId: string | null
+
+    @AllowNull(true)
+    @Column(DataType.STRING)
+    fullName: string | null
+
+    @AllowNull(false)
+    @Default(false)
+    @Column(DataType.BOOLEAN)
+    isPay: boolean
+
     @HasMany(() => Post, {
         onDelete: 'CASCADE',
         onUpdate: 'CASCADE'

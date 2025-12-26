@@ -15,9 +15,12 @@
     },
     "dependencies": {
         "@reduxjs/toolkit": "^2.8.2",
+        "@stripe/react-stripe-js": "^5.4.1",
+        "@stripe/stripe-js": "^8.6.0",
         "axios": "^1.11.0",
         "cheerio": "^1.1.2",
         "jwt-decode": "^4.0.0",
+        "openai": "^6.15.0",
         "react": "^19.1.1",
         "react-dom": "^19.1.1",
         "react-hook-form": "^7.62.0",
