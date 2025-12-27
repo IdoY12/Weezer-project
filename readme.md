@@ -1,6 +1,6 @@
-# 🏝️ Holidex – Smart Vacations Platform
+# 🎸 Weezer – Modern Social Platform
 
-A modern full-stack vacation booking platform built with a production-first mindset.  
+A modern full-stack social platform built with a production-first mindset.  
 Dockerized architecture with real-time communication, authentication, cloud-ready services, and clean service separation.
 
 ---
@@ -51,7 +51,7 @@ docker compose up localstack
 ## 📂 Project Structure
 
 ```
-holidex/
+weezer/
 ├── backend/          # Express API server
 ├── frontend/         # React client application
 ├── io/               # Socket.IO real-time server
@@ -63,8 +63,9 @@ holidex/
 ## 🌟 Features
 
 - 🔒 Secure authentication with OAuth 2.0
-- 💳 Payment processing with Stripe
-- 🗄️ Robust MySQL database
+- 💬 Real-time messaging and notifications
+- 👥 User profiles and social connections
+- 📸 Media uploads and sharing
 - ⚡ Real-time updates via Socket.IO
 - 🌐 RESTful API architecture
 - 🎨 Modern React UI
