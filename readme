@@ -1,17 +1,17 @@
-# 🎵 Weezer — Social Network
+# 🎸 Weezer
 
-A full-stack social network project built for learning and practice.  
-Runs with Docker Compose and simulates a real production-like setup.
+A modern **full-stack social platform** built with a production-first mindset.
+
+Dockerized architecture with real-time communication, authentication, cloud-ready services, and clean service separation.
 
 ---
 
-## 🚀 Quick Start
+## ⚡ Quick Start
 
-Start everything:
-
+Run the entire system:
 ```bash
 docker compose up -d
-Services that will run:
+This starts all services:
 
 backend
 
@@ -21,25 +21,30 @@ mysql
 
 localstack
 
-socket service (io)
+sockets
 
-🧩 Run a Single Service
+Run a single service:
+
 bash
 Copy code
 docker compose up backend
 docker compose up frontend
 docker compose up mysql
 docker compose up localstack
-⚙️ Configuration
-All ports and environment variables are defined in docker-compose.yml
+🐳 Docker & Configuration
+All environment variables and ports are defined in docker-compose.yml
 
-Each service has its own Dockerfile
+Each service has its own Dockerfile:
 
-Internal communication is done via Docker service names
-(e.g. mysql, backend)
+/backend
 
-🛠 Stack
-TypeScript · React · Node.js · MySQL · Docker · Stripe · OAuth · Socket.IO
+/frontend
 
-Personal learning project focused on clean architecture
-and real-world backend & frontend integration.
+/io
+
+/database
+
+Services communicate internally using Docker service names (not localhost)
+
+🛠 Tech Stack
+TypeScript · Node.js · Express · React · Socket.IO · MySQL · Docker · OAuth · Stripe · LocalStack
