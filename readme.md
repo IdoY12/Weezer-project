@@ -72,11 +72,3 @@ holidex/
 - ☁️ AWS-ready with LocalStack for local development
 
 ---
-
-## 📝 License
-
-MIT License - feel free to use this project for learning and production.
-
----
-
-Built with ❤️ by the Holidex team
